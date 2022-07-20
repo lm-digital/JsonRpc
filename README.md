@@ -1,3 +1,6 @@
+# About
+Utilizzo del protocollo JsonRpc per esporre e interrogare una sorgente dati json
+
 # Setup
 1. Scaricare/clonare il repository
 2. Aprire il file soluzione OilBackendProject.Web/OilBackendProject.sln
