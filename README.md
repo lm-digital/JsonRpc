@@ -7,6 +7,7 @@
 #Usage test
 Sull'interfaccia Swagger inviare un richiesta con i seguenti parametri
 
+<pre>
 {
   "id": "1",
   "jsonrpc": "2.0",
@@ -16,3 +17,4 @@ Sull'interfaccia Swagger inviare un richiesta con i seguenti parametri
      "endDateISO8601": "2020-01-05"
   }
 }
+</pre>
