@@ -6,10 +6,12 @@ namespace OilBackendProject.Test
     [TestClass]
     public class OilServiceTest
     {
+        private const string _dataUrl = "https://datahub.io/core/oil-prices/r/brent-daily.json";
+
         [TestMethod]
         public async Task GetSerieForOneDay()
         {
-            var service = OilServiceFactory.Create();
+            var service = OilServiceFactory.Create(_dataUrl);
             Assert.IsNotNull(service);
 
             var serie = await service.GetOilPriceTrendAsync("2001-09-26", "2001-09-26");
@@ -21,7 +23,7 @@ namespace OilBackendProject.Test
         [TestMethod]
         public async Task GetSerieFor5Days()
         {
-            var service = OilServiceFactory.Create();
+            var service = OilServiceFactory.Create(_dataUrl);
             Assert.IsNotNull(service);
             //{"Date": "2001-09-03", "Price": 26.52},{"Date": "2001-09-04", "Price": 26.27},{"Date": "2001-09-05", "Price": 26.27},{"Date": "2001-09-06", "Price": 26.61},{"Date": "2001-09-07", "Price": 27.54}
             var serie = await service.GetOilPriceTrendAsync("2001-09-03", "2001-09-07");
